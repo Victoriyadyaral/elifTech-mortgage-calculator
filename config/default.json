@@ -1,0 +1,5 @@
+{
+    "port":5000,
+    "jwtSecret": "eliftech-mortgage-calculator",
+    "mongoURI": "mongodb+srv://vicroriya:11092010D@cluster0.fuwqi.mongodb.net/eliftech-mortgage-calculator?retryWrites=true&w=majority"
+}
