@@ -3,11 +3,6 @@ import { useHttp } from '../hooks/http.hook'
 import {useMessage} from '../hooks/message.hook'
 import { AuthContext } from '../context/AuthContext'
 
-//   useEffect(() => {
-//     window.M.updateTextFields()
-//   }, [])
-
-
 
 export const AuthPage = () => {
     const { loading, request, error, clearError } = useHttp()
@@ -21,6 +16,10 @@ export const AuthPage = () => {
     message(error)
     clearError()
   }, [error, message, clearError])
+
+   useEffect(() => {
+    window.M.updateTextFields()
+  }, [])
   
     const changeHandler = event => {
     setForm({ ...form, [event.target.name]: event.target.value })

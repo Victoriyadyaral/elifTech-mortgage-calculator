@@ -1,0 +1,4 @@
+.navbarItem {
+    display: flex;
+    flex-direction: column !important;
+}

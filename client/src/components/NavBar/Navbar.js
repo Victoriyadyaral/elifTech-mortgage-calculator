@@ -4,6 +4,8 @@ import {NavLink, useHistory} from 'react-router-dom'
 import { AuthContext } from '../../context/AuthContext'
 import { FaCalculator, FaBuilding, FaRegShareSquare } from "react-icons/fa";
 
+//import s from './Navbar.module.css'
+
 export const Navbar = () => {
   const history = useHistory()
   const auth = useContext(AuthContext)
@@ -19,9 +21,30 @@ export const Navbar = () => {
       <div className="nav-wrapper blue darken-1" style={{ padding: '0 2rem' }}>
         <span className="brand-logo">Mortgage calculator</span>
         <ul id="nav-mobile" className="right hide-on-med-and-down">
-          <li><NavLink to="/banks"><FaBuilding color="rgb(255, 255, 255)" size="30px"/> Banks</NavLink></li>
-          <li><NavLink to="/calculator"><FaCalculator color="rgb(255, 255, 255)" size="30px"/> Calculator</NavLink></li>
-          <li><a href="/" onClick={logoutHandler}><FaRegShareSquare color="rgb(255, 255, 255)" size="30px"/> Log out</a></li>
+          <li
+            // className={s.navbarItem}
+          >
+            <NavLink to="/banks">
+              <FaBuilding color="rgb(255, 255, 255)" size="30px" />
+              Banks
+            </NavLink>
+          </li>
+          <li
+            // className={s.navbarItem}
+          >
+            <NavLink to="/calculator">
+              <FaCalculator color="rgb(255, 255, 255)" size="30px" />
+              Calculator
+            </NavLink>
+          </li>
+          <li
+            // className={s.navbarItem}
+          >
+            <a href="/" onClick={logoutHandler}>
+              <FaRegShareSquare color="rgb(255, 255, 255)" size="30px" />
+              Log out
+            </a>
+          </li>
         </ul>
       </div>
     </nav>

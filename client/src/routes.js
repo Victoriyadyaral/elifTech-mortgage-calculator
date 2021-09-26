@@ -1,8 +1,7 @@
 import { Switch, Route, Redirect } from 'react-router-dom';
 import { BanksPage } from './pages/BanksPage';
 import { CalculatorPage } from './pages/CalculatorPage';
-//import { MonthlyPaymentsTable } from './pages/MonthlyPaymentsTablePage';
-import { DetailsBankPage } from './pages/DetailsBankPage';
+import { AddBankPage } from './pages/AddBankPage';
 import {AuthPage} from './pages/AuthPage'
 
 export const useRoutes = isAuthenticated => {
@@ -15,8 +14,8 @@ export const useRoutes = isAuthenticated => {
         <Route path="/calculator" exact>
           <CalculatorPage />
         </Route>
-        <Route path="/banks/:id">
-          <DetailsBankPage />
+        <Route path="/create">
+          <AddBankPage />
         </Route>
         <Redirect to="/banks" />
       </Switch>

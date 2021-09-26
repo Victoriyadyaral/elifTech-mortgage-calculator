@@ -3,7 +3,7 @@ import React from 'react';
 export  const MonthlyPaymentsTablePage = () => {
     return (
         <div>
-            <h1>Monthly Payments Table Page</h1>
+            <h2>Monthly Payments Table Page</h2>
       </div>
   )
 }
